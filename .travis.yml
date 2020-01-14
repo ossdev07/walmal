@@ -10,6 +10,8 @@ arch:
         - ppc64le
         - arm64
         - s390x
+
+os: linux
 script:
         - date
         - date| sha256sum
