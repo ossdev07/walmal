@@ -14,13 +14,3 @@ script:
         - date
         - date| sha256sum
 
-deploy:
-        - provider: script
-            script: echo "Hello world from $(uname -m)"
-            skip_cleanup: true
-        - provider: script
-            skip_cleanup: true
-            script: echo "F'ck world from $(uname -m)"
-            on:
-              branch: master
-              condition: TRAVIS_CPU_ARCH = amd64
