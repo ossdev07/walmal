@@ -1,11 +1,14 @@
 language: c
 
-os:
-  - linux-amd64
-  - linux-arm64
-  - linux-ppc64le
-  - linux-s390x
-
+arch:
+  - amd64
+  - arm64
+  - ppc64le
+  - s390x
+os: linux
+compiler:
+  - gcc
+  - clang
 
 install: skip
 
