@@ -11,8 +11,6 @@ arch:
         - arm64
         - s390x
 script:
-        on:
-                condition: TRAVIS_CPU_ARCH = amd64
         - date
         - date| sha256sum
 
