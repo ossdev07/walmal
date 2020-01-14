@@ -1,6 +1,4 @@
-sudo: required
 language: c
-group: bluezone
 
 arch:
   - amd64
@@ -8,11 +6,11 @@ arch:
   - ppc64le
   - s390x
 
+compiler:
+  - gcc
+  - clang
 
-os: linux
+install: skip
 
 script:
-        - date
-        - date| sha256sum
-	- uname -m
-
+  - cd src
