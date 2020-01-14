@@ -5,7 +5,7 @@ arch:
   - arm64
   - ppc64le
   - s390x
-
+os: linux
 compiler:
   - gcc
   - clang
@@ -13,4 +13,4 @@ compiler:
 install: skip
 
 script:
-  - cd src
+  - echo "MY machine is $(uname -m)"
