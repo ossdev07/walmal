@@ -5,10 +5,20 @@ group: bluezone
 
 dist: xenial
 
-
+arch:
+        - amd64
+        - ppc64le
+        - arm64
+        - s390x
 script:
         on:
                 condition: TRAVIS_CPU_ARCH = amd64
         - date
         - date| sha256sum
 
+deploy:
+        on:
+            condition: TRAVIS_CPU_ARCH = amd64
+        - provider: script
+          script: echo "Hello world from $(uname -m)"
+          skip_cleanup: true
