@@ -12,5 +12,18 @@ compiler:
 
 install: skip
 
+stages:
+  - Test
+  - Arch-Release
+
+jobs:
+  include:
+    - stage: Test
+      script:
+        - echo Stage 1
+    - stage: Arch-Release
+      script:
+        - echo Stage 2
+
 script:
   - echo "MY machine is $(uname -m)"
